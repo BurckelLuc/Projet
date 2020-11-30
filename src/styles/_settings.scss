@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Dossis:wght@800&family=Josefin+Sans:wght@100&family=Nova+Round&display=swap');
+
+$font-1:'Nova Round',cursive;
+$font-2:'Dossis',sans-serif;
+$font-3:'Josefin Sans',serif;
+
+$color-1: #2a1d52;
+$color-2: #242962;
+$color-3: #2c8576;
+$color-4: rgb(44, 82, 124);
+$color-5: #e6e6e6;
+$color-6:rgb(32, 30, 30);
+$white: rgb(187, 187, 187);
+$white-1:white;
+$black: #333;
+$black-1:black;
+$color-bar:rgba(180,179,179,0.5);
+
+$borderRadius: 25px;
+$shadow: 0 1px 3px $black;
+$min-height: 92.5vh;
+
+@mixin verticalCenter{
+  display : flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 1rem auto;
+  max-width: 1200px;
+  font-family: $font-1;
+  color: $black;
+}
+
+button{
+  cursor: pointer;
+}
+
+li{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: $black;
+  cursor: pointer;
+}
+
+a:visited{
+  color: $black;
+}
+
+.home,.skill,.formation,.experience,.contact,.knowledges{
+  display: flex;
+
+  @media screen and (max-width:850px){
+    display: block !important;
+  }
+}
+
+.homeContent,.skillContent,.formationContent,.experienceContent,.contactContent,.knowledgesContent{
+  margin-left: .4rem;
+
+  @media screen and (max-width:850px){
+    margin-left: 0;
+  }
+}
+
+body{
+  background-color: #333;
+}

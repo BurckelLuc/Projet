@@ -1,0 +1,71 @@
+.home{
+    .homeContent{
+        background: linear-gradient(20deg, $color-6 14%, transparent 70%);
+        min-height: $min-height;
+        width: 100%;
+        border-radius: $borderRadius;
+        position: relative;
+        overflow: hidden;
+
+        &:after{
+            content: '';
+      position: absolute;
+      height: 100%;
+      width: inherit;
+      background: url('../../media/coucherSoleil.jpg') no-repeat center/cover;
+      z-index: -1;  // mettre en arrière plan
+      filter: brightness(70%);
+    }
+
+    .content {
+      position: absolute;
+      top: 20%;
+      left: 13%;
+      font-family: $font-1;
+
+      h1 {
+        font-size: 6rem;
+        font-family: $font-3;
+        color: $color-5;
+        text-transform: uppercase;
+        text-shadow: 3px 6px 2px $black;
+      }
+      h2 {
+        font-size: 3rem;
+        padding: 1.5rem 0 7rem;
+        color: $color-3;
+        text-shadow: 1px 4px 1px $black;
+      }
+      .pdf {
+        a {
+          font-weight:900;
+          font-size: 2rem;
+          background: $color-3;
+          padding: 1rem 2rem;
+          border-radius: $borderRadius;
+          box-shadow: 0 5px 1px rgb(15, 15, 15);
+          transition: 0.2s ease;
+
+          &:hover {
+            background: $color-4;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 850px){
+  .homeContent {
+    margin: 0 !important;
+  }
+}
+@media screen and (max-width:760px){
+  .homeContent {
+    h1 {
+      font-size: 3rem !important;
+    }
+    h2 {
+      font-size: 1.8rem !important;
+    }
+  }
+}
